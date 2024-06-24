@@ -1,0 +1,29 @@
+TRAINING:
+  experiment_name: 'Your_Experiment'
+  result_path: './results'
+  num_epochs: 250
+  batch_size: 256
+DATA:
+  training_files: [
+    # ADd your data
+    ['File_1.tif', 'Entropy_File_1.tif'],
+  ]
+  mito_perc_thresh: 0.3
+MODEL:
+  img_size: 128 
+  img_stride: 64
+  patch_size: 4 
+  embed: 128 
+  embed_dim: 128 
+  depth: 14
+  num_heads: 1
+  decoder_embed_dim: 64 
+  decoder_depth: 7
+  decoder_num_heads: 8
+  mlp_ratio: 2.0
+  mask_ratio: 0.5
+  pos_encode_w: 0.08
+  entropy_loss_threshold: 0.1
+  entropy_pixel_threshold: 0.4
+  patch_perc_keep: 0.7
+  weights: [0.16, 0.16, 0.36, 0.16, 0.16]  # BG, IB, Cristae, Matrix, Ambiguous

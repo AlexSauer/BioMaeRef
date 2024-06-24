@@ -1,0 +1,19 @@
+TRAINING:
+  experiment_name: 'AE'
+  result_path: './results'
+  num_epochs: 100
+  batch_size: 256
+  lr: 0.01
+DATA:
+  training_files: [
+    # Fill with your data!!
+    ['File_1.tif', 'Entropy_File_1.tif'],
+  ]
+  mito_perc_thresh: 0.3
+MODEL:
+  img_size: 128 
+  img_stride: 64
+  base_channel_size: 32
+  depth: 6
+  entropy_loss_threshold: 0.1
+  weights: [0.16, 0.16, 0.36, 0.16, 0.16]  # BG, IB, Cristae, Matrix, Ambiguous
